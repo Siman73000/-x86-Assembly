@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "assemble-and-link",
+            "type": "shell",
+            "command": "C:\\masm32\\bin\\ml.exe",  // Adjust the path accordingly
+            "args": [
+                "/c",
+                "/coff",
+                "/Zi",
+                "/Fl",
+                "/masm32/include",  // Add this line to specify the include path
+                "${Window}"
+            ],            
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
